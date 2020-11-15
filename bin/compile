@@ -46,6 +46,8 @@ export PATH=$path_to_cargo:$PATH
 
 # Do the build
 cd "$build"
+cargo install cargo-web
+cargo install wasm-pack
 cargo build ${CARGO_BUILD_FLAGS:-"--release"}
 
 # Determine a default start command
